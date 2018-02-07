@@ -1,0 +1,11 @@
+{
+  "name": "column4",
+  "main": "binarySearch.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3"
+  }
+}

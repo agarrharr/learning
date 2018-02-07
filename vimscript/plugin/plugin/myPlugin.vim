@@ -1,0 +1,1 @@
+nnoremap x daw
