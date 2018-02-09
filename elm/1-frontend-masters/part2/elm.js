@@ -8145,33 +8145,104 @@ var _elm_lang$html$Html_Attributes$classList = function (list) {
 };
 var _elm_lang$html$Html_Attributes$style = _elm_lang$virtual_dom$VirtualDom$style;
 
+var _rtfeldman$elm_workshop$Main$model = {
+	result: {id: 1, name: 'TheSeamau5/elm-checkerboardgrid-tutorial', stars: 66}
+};
 var _rtfeldman$elm_workshop$Main$main = _elm_lang$virtual_dom$Native_VirtualDom.staticProgram(
-	A2(
-		_elm_lang$html$Html$div,
-		{
-			ctor: '::',
-			_0: _elm_lang$html$Html_Attributes$class('content'),
-			_1: {ctor: '[]'}
-		},
-		{
-			ctor: '::',
-			_0: A2(
-				_elm_lang$html$Html$header,
-				{ctor: '[]'},
-				{
-					ctor: '::',
-					_0: _elm_lang$html$Html$text('ElmHub'),
-					_1: {
+	function () {
+		var elmHubHeader = A2(
+			_elm_lang$html$Html$header,
+			{ctor: '[]'},
+			{
+				ctor: '::',
+				_0: A2(
+					_elm_lang$html$Html$h1,
+					{ctor: '[]'},
+					{
 						ctor: '::',
-						_0: A2(
-							_elm_lang$html$Html$span,
-							{ctor: '[]'},
-							{ctor: '[]'}),
+						_0: _elm_lang$html$Html$text('ElmHub'),
 						_1: {ctor: '[]'}
-					}
-				}),
-			_1: {ctor: '[]'}
-		}));
+					}),
+				_1: {
+					ctor: '::',
+					_0: A2(
+						_elm_lang$html$Html$span,
+						{
+							ctor: '::',
+							_0: _elm_lang$html$Html_Attributes$class('tagline'),
+							_1: {ctor: '[]'}
+						},
+						{
+							ctor: '::',
+							_0: _elm_lang$html$Html$text('Like GitHub, but for Elm things.'),
+							_1: {ctor: '[]'}
+						}),
+					_1: {ctor: '[]'}
+				}
+			});
+		return A2(
+			_elm_lang$html$Html$div,
+			{
+				ctor: '::',
+				_0: _elm_lang$html$Html_Attributes$class('content'),
+				_1: {ctor: '[]'}
+			},
+			{
+				ctor: '::',
+				_0: elmHubHeader,
+				_1: {
+					ctor: '::',
+					_0: A2(
+						_elm_lang$html$Html$ul,
+						{
+							ctor: '::',
+							_0: _elm_lang$html$Html_Attributes$class('results'),
+							_1: {ctor: '[]'}
+						},
+						{
+							ctor: '::',
+							_0: A2(
+								_elm_lang$html$Html$li,
+								{ctor: '[]'},
+								{
+									ctor: '::',
+									_0: A2(
+										_elm_lang$html$Html$span,
+										{
+											ctor: '::',
+											_0: _elm_lang$html$Html_Attributes$class('star-count'),
+											_1: {ctor: '[]'}
+										},
+										{
+											ctor: '::',
+											_0: _elm_lang$html$Html$text(
+												_elm_lang$core$Basics$toString(_rtfeldman$elm_workshop$Main$model.result.stars)),
+											_1: {ctor: '[]'}
+										}),
+									_1: {
+										ctor: '::',
+										_0: A2(
+											_elm_lang$html$Html$a,
+											{
+												ctor: '::',
+												_0: _elm_lang$html$Html_Attributes$href(
+													A2(_elm_lang$core$Basics_ops['++'], 'https://github.com/', _rtfeldman$elm_workshop$Main$model.result.name)),
+												_1: {ctor: '[]'}
+											},
+											{
+												ctor: '::',
+												_0: _elm_lang$html$Html$text(_rtfeldman$elm_workshop$Main$model.result.name),
+												_1: {ctor: '[]'}
+											}),
+										_1: {ctor: '[]'}
+									}
+								}),
+							_1: {ctor: '[]'}
+						}),
+					_1: {ctor: '[]'}
+				}
+			});
+	}());
 
 var Elm = {};
 Elm['Main'] = Elm['Main'] || {};

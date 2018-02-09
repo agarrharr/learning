@@ -4,19 +4,30 @@ import Html exposing (..)
 import Html.Attributes exposing (..)
 
 
+model =
+    { result =
+        { id = 1
+        , name = "TheSeamau5/elm-checkerboardgrid-tutorial"
+        , stars = 66
+        }
+    }
+
+
 main =
-    div [ class "content" ]
-        [ header []
-            [ -- TODO wrap this text in an <h1>
-              text "ElmHub"
-            , span
-                [-- TODO give this span a class="tagline" attribute.
-                 --
-                 -- HINT: look at how our <div class="content"> does this above.
+    let
+        elmHubHeader =
+            header []
+                [ h1 [] [ text "ElmHub" ]
+                , span [ class "tagline" ] [ text "Like GitHub, but for Elm things." ]
                 ]
-                [{- TODO put some text in here that says:
-                    "Like GitHub, but for Elm things."
-                 -}
+    in
+        div [ class "content" ]
+            [ elmHubHeader
+            , ul [ class "results" ]
+                [ li []
+                    [ span [ class "star-count" ] [ text (toString model.result.stars) ]
+                    , a [ href ("https://github.com/" ++ model.result.name) ]
+                        [ text model.result.name ]
+                    ]
                 ]
             ]
-        ]
