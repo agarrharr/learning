@@ -10,6 +10,7 @@ Whenever I want to learn something new, I started building stuff with it. Here i
 ## Languages
 
 - [ ] [Bash](/bash)
+- [ ] [Elm](/elm)
 - [ ] [Go](/go)
 - [ ] [Python](/python)
 - [ ] [TypeScript](/typescript)
