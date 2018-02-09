@@ -8262,7 +8262,16 @@ var _elm_lang$html$Html_Events$Options = F2(
 
 var _rtfeldman$elm_workshop$Main$update = F2(
 	function (msg, model) {
-		return model;
+		return _elm_lang$core$Native_Utils.eq(msg.operation, 'DELETE_BY_ID') ? _elm_lang$core$Native_Utils.update(
+			model,
+			{
+				results: A2(
+					_elm_lang$core$List$filter,
+					function (result) {
+						return !_elm_lang$core$Native_Utils.eq(result.id, msg.data);
+					},
+					model.results)
+			}) : model;
 	});
 var _rtfeldman$elm_workshop$Main$viewSearchResult = function (result) {
 	return A2(
@@ -8309,7 +8318,12 @@ var _rtfeldman$elm_workshop$Main$viewSearchResult = function (result) {
 						{
 							ctor: '::',
 							_0: _elm_lang$html$Html_Attributes$class('hide-result'),
-							_1: {ctor: '[]'}
+							_1: {
+								ctor: '::',
+								_0: _elm_lang$html$Html_Events$onClick(
+									{operation: 'DELETE_BY_ID', data: result.id}),
+								_1: {ctor: '[]'}
+							}
 						},
 						{
 							ctor: '::',
