@@ -8262,149 +8262,24 @@ var _elm_lang$html$Html_Events$Options = F2(
 
 var _rtfeldman$elm_workshop$Main$update = F2(
 	function (msg, model) {
-		return model;
+		var _p0 = msg;
+		if (_p0.ctor === 'SetQuery') {
+			return _elm_lang$core$Native_Utils.update(
+				model,
+				{query: _p0._0});
+		} else {
+			return _elm_lang$core$Native_Utils.update(
+				model,
+				{
+					results: A2(
+						_elm_lang$core$List$filter,
+						function (result) {
+							return !_elm_lang$core$Native_Utils.eq(result.id, _p0._0);
+						},
+						model.results)
+				});
+		}
 	});
-var _rtfeldman$elm_workshop$Main$viewSearchResult = function (result) {
-	return A2(
-		_elm_lang$html$Html$li,
-		{ctor: '[]'},
-		{
-			ctor: '::',
-			_0: A2(
-				_elm_lang$html$Html$span,
-				{
-					ctor: '::',
-					_0: _elm_lang$html$Html_Attributes$class('star-count'),
-					_1: {ctor: '[]'}
-				},
-				{
-					ctor: '::',
-					_0: _elm_lang$html$Html$text(
-						_elm_lang$core$Basics$toString(result.stars)),
-					_1: {ctor: '[]'}
-				}),
-			_1: {
-				ctor: '::',
-				_0: A2(
-					_elm_lang$html$Html$a,
-					{
-						ctor: '::',
-						_0: _elm_lang$html$Html_Attributes$href(
-							A2(_elm_lang$core$Basics_ops['++'], 'https://github.com/', result.name)),
-						_1: {
-							ctor: '::',
-							_0: _elm_lang$html$Html_Attributes$target('_blank'),
-							_1: {ctor: '[]'}
-						}
-					},
-					{
-						ctor: '::',
-						_0: _elm_lang$html$Html$text(result.name),
-						_1: {ctor: '[]'}
-					}),
-				_1: {
-					ctor: '::',
-					_0: A2(
-						_elm_lang$html$Html$button,
-						{
-							ctor: '::',
-							_0: _elm_lang$html$Html_Attributes$class('hide-result'),
-							_1: {ctor: '[]'}
-						},
-						{
-							ctor: '::',
-							_0: _elm_lang$html$Html$text('X'),
-							_1: {ctor: '[]'}
-						}),
-					_1: {ctor: '[]'}
-				}
-			}
-		});
-};
-var _rtfeldman$elm_workshop$Main$view = function (model) {
-	return A2(
-		_elm_lang$html$Html$div,
-		{
-			ctor: '::',
-			_0: _elm_lang$html$Html_Attributes$class('content'),
-			_1: {ctor: '[]'}
-		},
-		{
-			ctor: '::',
-			_0: A2(
-				_elm_lang$html$Html$header,
-				{ctor: '[]'},
-				{
-					ctor: '::',
-					_0: A2(
-						_elm_lang$html$Html$h1,
-						{ctor: '[]'},
-						{
-							ctor: '::',
-							_0: _elm_lang$html$Html$text('ElmHub'),
-							_1: {ctor: '[]'}
-						}),
-					_1: {
-						ctor: '::',
-						_0: A2(
-							_elm_lang$html$Html$span,
-							{
-								ctor: '::',
-								_0: _elm_lang$html$Html_Attributes$class('tagline'),
-								_1: {ctor: '[]'}
-							},
-							{
-								ctor: '::',
-								_0: _elm_lang$html$Html$text('Like GitHub, but for Elm things.'),
-								_1: {ctor: '[]'}
-							}),
-						_1: {ctor: '[]'}
-					}
-				}),
-			_1: {
-				ctor: '::',
-				_0: A2(
-					_elm_lang$html$Html$input,
-					{
-						ctor: '::',
-						_0: _elm_lang$html$Html_Attributes$class('search-query'),
-						_1: {
-							ctor: '::',
-							_0: _elm_lang$html$Html_Attributes$defaultValue(model.query),
-							_1: {ctor: '[]'}
-						}
-					},
-					{ctor: '[]'}),
-				_1: {
-					ctor: '::',
-					_0: A2(
-						_elm_lang$html$Html$button,
-						{
-							ctor: '::',
-							_0: _elm_lang$html$Html_Attributes$class('search-button'),
-							_1: {ctor: '[]'}
-						},
-						{
-							ctor: '::',
-							_0: _elm_lang$html$Html$text('Search'),
-							_1: {ctor: '[]'}
-						}),
-					_1: {
-						ctor: '::',
-						_0: A2(
-							_elm_lang$html$Html$ul,
-							{
-								ctor: '::',
-								_0: _elm_lang$html$Html_Attributes$class('results'),
-								_1: {ctor: '[]'}
-							},
-							A2(_elm_lang$core$List$map, _rtfeldman$elm_workshop$Main$viewSearchResult, model.results)),
-						_1: {ctor: '[]'}
-					}
-				}
-			}
-		});
-};
 var _rtfeldman$elm_workshop$Main$elmHubHeader = A2(
 	_elm_lang$html$Html$header,
 	{ctor: '[]'},
@@ -8459,8 +8334,6 @@ var _rtfeldman$elm_workshop$Main$initialModel = {
 		}
 	}
 };
-var _rtfeldman$elm_workshop$Main$main = _elm_lang$html$Html$beginnerProgram(
-	{view: _rtfeldman$elm_workshop$Main$view, update: _rtfeldman$elm_workshop$Main$update, model: _rtfeldman$elm_workshop$Main$initialModel})();
 var _rtfeldman$elm_workshop$Main$Model = F2(
 	function (a, b) {
 		return {query: a, results: b};
@@ -8472,9 +8345,161 @@ var _rtfeldman$elm_workshop$Main$SearchResult = F3(
 var _rtfeldman$elm_workshop$Main$DeleteById = function (a) {
 	return {ctor: 'DeleteById', _0: a};
 };
+var _rtfeldman$elm_workshop$Main$viewSearchResult = function (result) {
+	return A2(
+		_elm_lang$html$Html$li,
+		{ctor: '[]'},
+		{
+			ctor: '::',
+			_0: A2(
+				_elm_lang$html$Html$span,
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html_Attributes$class('star-count'),
+					_1: {ctor: '[]'}
+				},
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html$text(
+						_elm_lang$core$Basics$toString(result.stars)),
+					_1: {ctor: '[]'}
+				}),
+			_1: {
+				ctor: '::',
+				_0: A2(
+					_elm_lang$html$Html$a,
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html_Attributes$href(
+							A2(_elm_lang$core$Basics_ops['++'], 'https://github.com/', result.name)),
+						_1: {
+							ctor: '::',
+							_0: _elm_lang$html$Html_Attributes$target('_blank'),
+							_1: {ctor: '[]'}
+						}
+					},
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html$text(result.name),
+						_1: {ctor: '[]'}
+					}),
+				_1: {
+					ctor: '::',
+					_0: A2(
+						_elm_lang$html$Html$button,
+						{
+							ctor: '::',
+							_0: _elm_lang$html$Html_Attributes$class('hide-result'),
+							_1: {
+								ctor: '::',
+								_0: _elm_lang$html$Html_Events$onClick(
+									_rtfeldman$elm_workshop$Main$DeleteById(result.id)),
+								_1: {ctor: '[]'}
+							}
+						},
+						{
+							ctor: '::',
+							_0: _elm_lang$html$Html$text('X'),
+							_1: {ctor: '[]'}
+						}),
+					_1: {ctor: '[]'}
+				}
+			}
+		});
+};
 var _rtfeldman$elm_workshop$Main$SetQuery = function (a) {
 	return {ctor: 'SetQuery', _0: a};
 };
+var _rtfeldman$elm_workshop$Main$view = function (model) {
+	return A2(
+		_elm_lang$html$Html$div,
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html_Attributes$class('content'),
+			_1: {ctor: '[]'}
+		},
+		{
+			ctor: '::',
+			_0: A2(
+				_elm_lang$html$Html$header,
+				{ctor: '[]'},
+				{
+					ctor: '::',
+					_0: A2(
+						_elm_lang$html$Html$h1,
+						{ctor: '[]'},
+						{
+							ctor: '::',
+							_0: _elm_lang$html$Html$text('ElmHub'),
+							_1: {ctor: '[]'}
+						}),
+					_1: {
+						ctor: '::',
+						_0: A2(
+							_elm_lang$html$Html$span,
+							{
+								ctor: '::',
+								_0: _elm_lang$html$Html_Attributes$class('tagline'),
+								_1: {ctor: '[]'}
+							},
+							{
+								ctor: '::',
+								_0: _elm_lang$html$Html$text('Like GitHub, but for Elm things.'),
+								_1: {ctor: '[]'}
+							}),
+						_1: {ctor: '[]'}
+					}
+				}),
+			_1: {
+				ctor: '::',
+				_0: A2(
+					_elm_lang$html$Html$input,
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html_Attributes$class('search-query'),
+						_1: {
+							ctor: '::',
+							_0: _elm_lang$html$Html_Events$onInput(_rtfeldman$elm_workshop$Main$SetQuery),
+							_1: {
+								ctor: '::',
+								_0: _elm_lang$html$Html_Attributes$defaultValue(model.query),
+								_1: {ctor: '[]'}
+							}
+						}
+					},
+					{ctor: '[]'}),
+				_1: {
+					ctor: '::',
+					_0: A2(
+						_elm_lang$html$Html$button,
+						{
+							ctor: '::',
+							_0: _elm_lang$html$Html_Attributes$class('search-button'),
+							_1: {ctor: '[]'}
+						},
+						{
+							ctor: '::',
+							_0: _elm_lang$html$Html$text('Search'),
+							_1: {ctor: '[]'}
+						}),
+					_1: {
+						ctor: '::',
+						_0: A2(
+							_elm_lang$html$Html$ul,
+							{
+								ctor: '::',
+								_0: _elm_lang$html$Html_Attributes$class('results'),
+								_1: {ctor: '[]'}
+							},
+							A2(_elm_lang$core$List$map, _rtfeldman$elm_workshop$Main$viewSearchResult, model.results)),
+						_1: {ctor: '[]'}
+					}
+				}
+			}
+		});
+};
+var _rtfeldman$elm_workshop$Main$main = _elm_lang$html$Html$beginnerProgram(
+	{view: _rtfeldman$elm_workshop$Main$view, update: _rtfeldman$elm_workshop$Main$update, model: _rtfeldman$elm_workshop$Main$initialModel})();
 
 var Elm = {};
 Elm['Main'] = Elm['Main'] || {};
