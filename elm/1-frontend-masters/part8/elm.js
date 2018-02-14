@@ -8465,12 +8465,17 @@ var _rtfeldman$elm_workshop$Main$responseDecoder = A2(
 var _rtfeldman$elm_workshop$Main$HandleSearchError = function (a) {
 	return {ctor: 'HandleSearchError', _0: a};
 };
-var _rtfeldman$elm_workshop$Main$decodeResponse = function (json) {
-	return _rtfeldman$elm_workshop$Main$HandleSearchError(
-		_elm_lang$core$Maybe$Just('TODO decode the response!'));
-};
 var _rtfeldman$elm_workshop$Main$HandleSearchResponse = function (a) {
 	return {ctor: 'HandleSearchResponse', _0: a};
+};
+var _rtfeldman$elm_workshop$Main$decodeResponse = function (json) {
+	var _p4 = A2(_elm_lang$core$Json_Decode$decodeValue, _rtfeldman$elm_workshop$Main$responseDecoder, json);
+	if (_p4.ctor === 'Ok') {
+		return _rtfeldman$elm_workshop$Main$HandleSearchResponse(_p4._0);
+	} else {
+		return _rtfeldman$elm_workshop$Main$HandleSearchError(
+			_elm_lang$core$Maybe$Just('TODO decode the response!'));
+	}
 };
 var _rtfeldman$elm_workshop$Main$DeleteById = function (a) {
 	return {ctor: 'DeleteById', _0: a};
@@ -8647,7 +8652,7 @@ var _rtfeldman$elm_workshop$Main$main = _elm_lang$html$Html$program(
 			_1: _rtfeldman$elm_workshop$Main$githubSearch(
 				_rtfeldman$elm_workshop$Main$getQueryString(_rtfeldman$elm_workshop$Main$initialModel.query))
 		},
-		subscriptions: function (_p4) {
+		subscriptions: function (_p5) {
 			return _rtfeldman$elm_workshop$Main$githubResponse(_rtfeldman$elm_workshop$Main$decodeResponse);
 		}
 	})();
