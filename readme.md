@@ -20,6 +20,7 @@ Whenever I want to learn something new, I started building stuff with it. Here i
 ## Books
 
 - [ ] [Programming Pearls](/book-programming-pearls)
+- [ ] [Learn Vimscript the Hard Way](/vimscript/vimscript-the-hard-way)
 
 ## License
 
