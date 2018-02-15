@@ -13,6 +13,7 @@ Whenever I want to learn something new, I started building stuff with it. Here i
 - [ ] [Elm](/elm)
 - [ ] [Go](/go)
 - [ ] [Python](/python)
+- [ ] [Reason](/reason)
 - [ ] [TypeScript](/typescript)
 - [ ] [Vimscript](/vimscript)
 
