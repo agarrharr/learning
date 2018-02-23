@@ -9,27 +9,16 @@ require "rdiscount"
 def main
   Dir["*.md"].each do |path|
     content = File.read(path)
-    page = Page.new(path, content)
-    File.write(page.new_path, page.compile)
+    File.write(new_path(path), compile(content))
   end
 end
 
-# Functional core
-class Page
-  attr_reader :path, :content
+def compile(content)
+  RDiscount.new(content).to_html
+end
 
-  def initialize(path, content)
-    @path = path
-    @content = content
-  end
-
-  def compile
-    RDiscount.new(content).to_html
-  end
-
-  def new_path
-    path.sub(/\.md$/, ".html")
-  end
+def new_path(path)
+  path.sub(/\.md$/, ".html")
 end
 
 main
