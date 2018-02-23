@@ -5,7 +5,7 @@ require "rdiscount"
 
 def main
   paths.each do |path|
-    write_compiled(path)
+    Page.new(path).write_compiled
   end
 end
 
@@ -13,20 +13,28 @@ def paths
   Dir["*.md"]
 end
 
-def read(path)
-  File.read(path)
-end
+class Page
+  attr_reader :path
 
-def compile(path)
-  RDiscount.new(read(path)).to_html
-end
+  def initialize(path)
+    @path = path
+  end
 
-def new_path(path)
-  path.sub(/\.md$/, ".html")
-end
+  def read
+    File.read(path)
+  end
 
-def write_compiled(path)
-  File.write(new_path(path), compile(path))
+  def compile
+    RDiscount.new(read).to_html
+  end
+
+  def new_path
+    path.sub(/\.md$/, ".html")
+  end
+
+  def write_compiled
+    File.write(new_path, compile)
+  end
 end
 
 main
