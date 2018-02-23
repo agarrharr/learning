@@ -1,20 +1,20 @@
 # Vim command to create mapping to run
 # :map <leader>t :w\|:!touch a.html && rm -f *.html && ruby build.rb && ls -l *.html && cat *.html<cr>
+#
+# Functional core, Imperative shell
 
 require "rdiscount"
 
+# Imperative shell
 def main
-  paths.each do |path|
+  Dir["*.md"].each do |path|
     content = File.read(path)
     page = Page.new(path, content)
     File.write(page.new_path, page.compile)
   end
 end
 
-def paths
-  Dir["*.md"]
-end
-
+# Functional core
 class Page
   attr_reader :path, :content
 
