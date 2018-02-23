@@ -1,11 +1,8 @@
 # Vim command to create mapping to run
 # :map <leader>t :w\|:!touch a.html && rm -f *.html && ruby build.rb && ls -l *.html && cat *.html<cr>
-#
-# Functional core, Imperative shell
 
 require "rdiscount"
 
-# Imperative shell
 def main
   Dir["*.md"].each do |path|
     content = File.read(path)
