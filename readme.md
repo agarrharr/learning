@@ -20,12 +20,13 @@ Whenever I want to learn something new, I started building stuff with it. Here i
 
 ## Books
 
-- [ ] [Programming Pearls](/book-programming-pearls)
+- [ ] [Programming Pearls](/general/book-programming-pearls)
 - [ ] [Learn Vimscript the Hard Way](/vimscript/vimscript-the-hard-way)
+- [ ] [The Well Grounded Rubyist](/ruby/4-well-grounded-rubyist)
 
 ## Talks
 
-- [x] [Talk - The Magic Tricks of Testing](/ruby/3-magic-tricks-of-testing)
+- [x] [The Magic Tricks of Testing](/ruby/3-magic-tricks-of-testing)
 
 ## License
 
