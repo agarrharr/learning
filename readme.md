@@ -32,4 +32,4 @@ Whenever I want to learn something new, I started building stuff with it. Here i
 
 [![CC0](https://i.creativecommons.org/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)
 
-To the extent possible under law, Adam Harris has waived all copyright and related or neighboring rights to this work.
+To the extent possible under law, Adam Garrett-Harris has waived all copyright and related or neighboring rights to this work.
