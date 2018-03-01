@@ -24,6 +24,7 @@ Whenever I want to learn something new, I started building stuff with it. Here i
 - [ ] [Programming Pearls](/general/book-programming-pearls)
 - [ ] [Learn Vimscript the Hard Way](/vimscript/vimscript-the-hard-way)
 - [ ] [The Well Grounded Rubyist](/ruby/4-well-grounded-rubyist)
+- [ ] [Introduction to Algorithms](/general/introduction-to-algorithms)
 
 ## Talks
 
