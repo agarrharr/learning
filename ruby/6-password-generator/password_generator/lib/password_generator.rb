@@ -7,8 +7,7 @@ module PasswordGenerator
   NUMBER = ASCII.grep(/[[:digit:]]/)
   PUNCT = ASCII.grep(/[[:punct:]]/)
 
-  def self.generate(unique: false, punct: 0)
-    length = 20
+  def self.generate(unique: false, punct: 0, length: 20)
     alpha_ary = ALPHA.dup
     punct_ary = PUNCT.dup
     ((1..(length - punct)).map do

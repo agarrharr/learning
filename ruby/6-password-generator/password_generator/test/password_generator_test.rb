@@ -18,9 +18,10 @@ class PasswordGeneratorTest < Minitest::Test
 
   def test_punct
     50.times do
-      password = PasswordGenerator.generate(unique: true, punct: 2)
+      password = PasswordGenerator.generate(unique: true, punct: 2, length: 30)
       assert_match /^[[:alpha:]]*[[:punct:]][[:alpha:]]*[[:punct:]][[:alpha:]]*$/, password
-      assert_equal password.size, password.chars.uniq.size
+      assert_equal 30, password.size
+      assert_equal 30, password.chars.uniq.size
     end
   end
 end
