@@ -1,11 +1,10 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "password_generator/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "password_generator"
-  spec.version       = PasswordGenerator::VERSION
+  spec.version       = "0.0.0"
   spec.authors       = ["Adam Garrett-Harris"]
   spec.email         = ["agarrharr@users.noreply.github.com"]
 

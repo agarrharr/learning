@@ -1,5 +1,3 @@
-require "password_generator/version"
-
 module PasswordGenerator
   # Your code goes here...
   ASCII = ('!'..'~')
@@ -9,10 +7,23 @@ module PasswordGenerator
   NUMBER = ASCII.grep(/[[:digit:]]/)
   PUNCT = ASCII.grep(/[[:punct:]]/)
 
-  def self.generate
-    (1..20).map do
-      ALPHA.sample
-    end.join
+  def self.generate(unique: false, punct: 0)
+    length = 20
+    alpha_ary = ALPHA.dup
+    punct_ary = PUNCT.dup
+    ((1..(length - punct)).map do
+      sample(alpha_ary, unique)
+    end + (1..punct).map do
+      sample(punct_ary, unique)
+    end).shuffle.join
+  end
+
+  def self.sample(collection, unique)
+      if unique
+        collection.delete_at(rand(collection.size))
+      else
+        collection.sample
+      end
   end
 
   # length
