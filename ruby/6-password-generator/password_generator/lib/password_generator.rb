@@ -1,4 +1,4 @@
-module PasswordGenerator
+class PasswordGenerator
   ASCII = ('!'..'~')
   ALPHA = ASCII.grep(/[[:alpha:]]/)
   UPPER = ASCII.grep(/[[:upper:]]/)
@@ -6,7 +6,17 @@ module PasswordGenerator
   NUMBER = ASCII.grep(/[[:digit:]]/)
   PUNCT = ASCII.grep(/[[:punct:]]/)
 
-  def self.generate(unique: false, punct: 0, digit: 0, upper: nil,  length: 20)
+  attr_reader :unique, :punct, :digit, :upper, :length
+
+  def self.generate(opts = {})
+    new(opts).generate
+  end
+
+  def initialize(unique: false, punct: 0, digit: 0, upper: nil,  length: 20)
+    @unique, @punct, @digit, @upper, @length = unique, punct, digit, upper, length
+  end
+
+  def generate
     if upper
       default_sample = Sampler.new(LOWER, unique)
     else
