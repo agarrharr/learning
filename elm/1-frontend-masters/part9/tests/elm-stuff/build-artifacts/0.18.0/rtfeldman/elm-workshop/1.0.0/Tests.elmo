@@ -1,0 +1,93 @@
+var _rtfeldman$elm_workshop$Tests$all = A2(
+	_elm_community$elm_test$Test$describe,
+	'GitHub Response Decoder',
+	{
+		ctor: '::',
+		_0: A2(
+			_elm_community$elm_test$Test$test,
+			'it results in an Err for invalid JSON',
+			function (_p0) {
+				var _p1 = _p0;
+				var isErrorResult = function (result) {
+					return false;
+				};
+				var json = '{ \"pizza\": [] }';
+				return A2(
+					_elm_community$elm_test$Expect$true,
+					'Expected decoding an invalid response to return an Err.',
+					isErrorResult(
+						A2(_elm_lang$core$Json_Decode$decodeString, _rtfeldman$elm_workshop$ElmHub$responseDecoder, json)));
+			}),
+		_1: {
+			ctor: '::',
+			_0: A2(
+				_elm_community$elm_test$Test$test,
+				'it successfully decodes a valid response',
+				function (_p2) {
+					var _p3 = _p2;
+					return A2(
+						_elm_community$elm_test$Expect$equal,
+						_elm_lang$core$Result$Ok(
+							{
+								ctor: '::',
+								_0: {id: 5, name: 'foo', stars: 42},
+								_1: {
+									ctor: '::',
+									_0: {id: 3, name: 'bar', stars: 77},
+									_1: {ctor: '[]'}
+								}
+							}),
+						A2(_elm_lang$core$Json_Decode$decodeString, _rtfeldman$elm_workshop$ElmHub$responseDecoder, '{ \"items\": [\n                    /* TODO: put JSON here! */\n                 ] }'));
+				}),
+			_1: {
+				ctor: '::',
+				_0: A2(
+					_elm_community$elm_test$Test$test,
+					'it decodes one SearchResult for each \'item\' in the JSON',
+					function (_p4) {
+						var _p5 = _p4;
+						var jsonFromId = function (id) {
+							return A2(
+								_elm_lang$core$Basics_ops['++'],
+								'{\"id\": ',
+								A2(
+									_elm_lang$core$Basics_ops['++'],
+									_elm_lang$core$Basics$toString(id),
+									', \"full_name\": \"foo\", \"stargazers_count\": 42}'));
+						};
+						var ids = {
+							ctor: '::',
+							_0: 12,
+							_1: {
+								ctor: '::',
+								_0: 5,
+								_1: {
+									ctor: '::',
+									_0: 76,
+									_1: {ctor: '[]'}
+								}
+							}
+						};
+						var jsonItems = A2(
+							_elm_lang$core$String$join,
+							', ',
+							A2(_elm_lang$core$List$map, jsonFromId, ids));
+						var json = A2(
+							_elm_lang$core$Basics_ops['++'],
+							'{ \"items\": [',
+							A2(_elm_lang$core$Basics_ops['++'], jsonItems, '] }'));
+						var _p6 = A2(_elm_lang$core$Json_Decode$decodeString, _rtfeldman$elm_workshop$ElmHub$responseDecoder, json);
+						if (_p6.ctor === 'Ok') {
+							return A2(
+								_elm_community$elm_test$Expect$equal,
+								_elm_lang$core$List$length(ids),
+								_elm_lang$core$List$length(_p6._0));
+						} else {
+							return _elm_community$elm_test$Expect$fail(
+								A2(_elm_lang$core$Basics_ops['++'], 'JSON decoding failed unexpectedly: ', _p6._0));
+						}
+					}),
+				_1: {ctor: '[]'}
+			}
+		}
+	});
