@@ -1,0 +1,17 @@
+/Users/agarrharr/Development/github/agarrharr/learning/cs/gradebook/test/GradeBook.Tests/bin/Debug/netcoreapp2.2/xunit.runner.visualstudio.dotnetcore.testadapter.dll
+/Users/agarrharr/Development/github/agarrharr/learning/cs/gradebook/test/GradeBook.Tests/bin/Debug/netcoreapp2.2/xunit.runner.reporters.netcoreapp10.dll
+/Users/agarrharr/Development/github/agarrharr/learning/cs/gradebook/test/GradeBook.Tests/bin/Debug/netcoreapp2.2/xunit.runner.utility.netcoreapp10.dll
+/Users/agarrharr/Development/github/agarrharr/learning/cs/gradebook/test/GradeBook.Tests/bin/Debug/netcoreapp2.2/GradeBook.Tests.deps.json
+/Users/agarrharr/Development/github/agarrharr/learning/cs/gradebook/test/GradeBook.Tests/bin/Debug/netcoreapp2.2/GradeBook.Tests.runtimeconfig.json
+/Users/agarrharr/Development/github/agarrharr/learning/cs/gradebook/test/GradeBook.Tests/bin/Debug/netcoreapp2.2/GradeBook.Tests.runtimeconfig.dev.json
+/Users/agarrharr/Development/github/agarrharr/learning/cs/gradebook/test/GradeBook.Tests/bin/Debug/netcoreapp2.2/GradeBook.Tests.dll
+/Users/agarrharr/Development/github/agarrharr/learning/cs/gradebook/test/GradeBook.Tests/bin/Debug/netcoreapp2.2/GradeBook.Tests.pdb
+/Users/agarrharr/Development/github/agarrharr/learning/cs/gradebook/test/GradeBook.Tests/obj/Debug/netcoreapp2.2/GradeBook.Tests.csprojAssemblyReference.cache
+/Users/agarrharr/Development/github/agarrharr/learning/cs/gradebook/test/GradeBook.Tests/obj/Debug/netcoreapp2.2/GradeBook.Tests.csproj.CoreCompileInputs.cache
+/Users/agarrharr/Development/github/agarrharr/learning/cs/gradebook/test/GradeBook.Tests/obj/Debug/netcoreapp2.2/GradeBook.Tests.AssemblyInfoInputs.cache
+/Users/agarrharr/Development/github/agarrharr/learning/cs/gradebook/test/GradeBook.Tests/obj/Debug/netcoreapp2.2/GradeBook.Tests.AssemblyInfo.cs
+/Users/agarrharr/Development/github/agarrharr/learning/cs/gradebook/test/GradeBook.Tests/obj/Debug/netcoreapp2.2/GradeBook.Tests.dll
+/Users/agarrharr/Development/github/agarrharr/learning/cs/gradebook/test/GradeBook.Tests/obj/Debug/netcoreapp2.2/GradeBook.Tests.pdb
+/Users/agarrharr/Development/github/agarrharr/learning/cs/gradebook/test/GradeBook.Tests/bin/Debug/netcoreapp2.2/GradeBook.dll
+/Users/agarrharr/Development/github/agarrharr/learning/cs/gradebook/test/GradeBook.Tests/bin/Debug/netcoreapp2.2/GradeBook.pdb
+/Users/agarrharr/Development/github/agarrharr/learning/cs/gradebook/test/GradeBook.Tests/obj/Debug/netcoreapp2.2/GradeBook.Tests.csproj.CopyComplete
