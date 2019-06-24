@@ -1,1 +1,5 @@
+# javascript/node
 node_modules
+
+# python
+__pycache__
