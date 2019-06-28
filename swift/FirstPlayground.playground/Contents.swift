@@ -84,3 +84,31 @@ func basicFunction(name: String) -> String {
 
 let greeting = basicFunction(name: "Adam")
 print(greeting)
+
+enum MediaType {
+    case movie
+    case book
+    case music
+    case game
+}
+
+var item: MediaType = .game
+
+struct Movie {
+    var title: String
+    var releaseYear: Int
+}
+
+var firstMovie: Movie = Movie(title: "Across the Universe", releaseYear: 1999)
+firstMovie.releaseYear = 2009
+
+
+var airlines = [
+    "AA": "American Airlines",
+    "BAW": "British Airways"]
+
+if let result = airlines["AA"] {
+    print(result)
+} else {
+    print("No matching airline found")
+}
