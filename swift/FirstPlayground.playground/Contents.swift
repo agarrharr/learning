@@ -77,3 +77,10 @@ let artist = "Gerry Rafferty"
 let duration = "4:51"
 
 let message = "Now playing \(trackName) by \(artist) which is \(duration) long"
+
+func basicFunction(name: String) -> String {
+    return "Hello \(name)!"
+}
+
+let greeting = basicFunction(name: "Adam")
+print(greeting)
