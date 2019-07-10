@@ -24,6 +24,7 @@
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="4uc-IR-5y4"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Dyo-f3-gom"/>
                                 </connections>
                             </tableView>
                         </subviews>

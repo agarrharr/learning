@@ -8,7 +8,15 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    // Table View Delegate Methods
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("You selected row \(indexPath.row) in section \(indexPath.section)")
+    }
+    
+    // Table View Data Methods
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 3
