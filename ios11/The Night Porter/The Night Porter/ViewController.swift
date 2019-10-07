@@ -10,6 +10,16 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    @IBAction func toggleDarkMode(_ sender: Any) {
+        let mySwitch = sender as! UISwitch
+        
+        if mySwitch.isOn {
+            view.backgroundColor = UIColor.darkGray
+        } else {
+            view.backgroundColor = UIColor.white
+        }
+    }
+    
     // Table View Delegate Methods
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -19,6 +29,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     // Table View Data Methods
     
     func numberOfSections(in tableView: UITableView) -> Int {
+        tableView.backgroundColor = UIColor.clear
         return 3
     }
     
@@ -49,6 +60,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             cell.textLabel?.text = "This shouldn't happen"
         }
         
+        cell.backgroundColor = UIColor.clear
+        
         return cell
     }
     
@@ -66,21 +79,26 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     
-    let dailyTasks = ["Check all windows",
-                      "Check all doors",
-                      "Is the boiler fueled?",
-                      "Check the mailbox",
-                      "Empty trash containers",
-                      "If freezing, check water pipes",
-                      "Document \"strange and unusual\" occurences"]
+    let dailyTasks = [
+        Task(name: "Check all windows", type: .daily, completed: false, lastCompleted: nil),
+        Task(name: "Check all doors", type: .daily, completed: false, lastCompleted: nil),
+        Task(name: "Is the boiler fueled?", type: .daily, completed: false, lastCompleted: nil),
+        Task(name: "Check the mailbox", type: .daily, completed: false, lastCompleted: nil),
+        Task(name: "Empty trash containers", type: .daily, completed: false, lastCompleted: nil),
+        Task(name: "If freezing, check water pipes", type: .daily, completed: false, lastCompleted: nil),
+        Task(name: "Document \"strange and unusual\" occurences" type: .daily, completed: false, lastCompleted: nil),
+    ]
     
-    let weeklyTasks = ["Check inside all cabins",
-                       "Flush all lavatories in cabins",
-                       "Walk the perimeter of property"]
+    let weeklyTasks = [
+        Task(name: "Check inside all cabins", type: .daily, completed: false, lastCompleted: nil),
+        Task(name: "Flush all lavatories in cabins", type: .daily, completed: false, lastCompleted: nil),
+        Task(name: "Walk the perimeter of property", type: .daily, completed: false, lastCompleted: nil),
+    ]
     
-    let monthlyTasks = ["Test security alarm",
-                      "Test motion detectors",
-                      "Test smoke alarms"]
+    let monthlyTasks = [
+        Task(name: "Test security alarm",
+        Task(name: "Test motion detectors",
+        Task(name: "Test smoke alarms"]
 
     
     override func viewDidLoad() {
