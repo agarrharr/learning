@@ -1,0 +1,2 @@
+name = 'Adam'
+puts name
