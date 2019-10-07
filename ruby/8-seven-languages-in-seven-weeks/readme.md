@@ -165,3 +165,27 @@
   ```bash
   ruby grep.rb
   ```
+
+## Day 3 - Self-Study
+
+Modify the CSV application to support an `each` method to return a `CsvRow` object. Use `method_missing` on that `CsvRow` to return the value for the column for a given heading.
+
+For example, for the file:
+
+```
+city, country, population
+Sanaa, Yemen, 2008000
+```
+
+allow an API that works like this
+
+```ruby
+csv = RubyCSV.new
+csv.each {|row| puts row.city}
+```
+
+This should print "Sanaa".
+
+```bash
+ruby csv.rb
+```
