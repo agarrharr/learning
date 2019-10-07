@@ -2,7 +2,7 @@
 
 ## Day 1 - Self-Study
 
-Find:
+### Find:
 
 - [The Ruby API](https://ruby-doc.org/core-2.6.5/)
 - [Programming Ruby: The Pragmatic Programmer's Guide](https://ruby-doc.org/core-2.6.5/)
@@ -10,7 +10,7 @@ Find:
 - Information about Ruby's [regular expressions](https://ruby-doc.org/core-2.6.5/Regexp.html)
 - Information about Ruby's [ranges](https://ruby-doc.org/core-2.6.5/Range.html)
 
-Do:
+### Do:
 
 - Print the string "Hello, world"
 
@@ -109,4 +109,59 @@ Do:
 
   ```bash
   ruby random.rb
+  ```
+
+## Day 2 - Self-Study
+
+### Find:
+
+- Find out how to access files with and without code blocks. What is the benefit of the code block?
+
+  ```bash
+  ruby files.rb
+  ```
+
+  You immediately get to map over each line instead of having to use `map` and `chomp`.
+
+- How would you translate a hash to an array?
+
+  ```bash
+  ruby translate.rb
+  ```
+
+  - Can you translate arrays to hashes?
+
+    Yes, but you have less information for what the key and the value is...
+
+- Can you iterate through a hash?
+
+  ```ruby
+  numberHash.each { |key, value|
+    puts "Key: #{key}"
+    puts "Value: #{value}"
+  }
+  ```
+
+- You can use Ruby arrays as stacks. What other common data structures do arrays support?
+
+  Queues, linked list, set.
+
+### Do:
+
+- Print the contents of an array of sixteen numbers, four numbers at a time, using just `each`. Now, do the same with `each_slice` in `Enumerable`.
+
+  ```bash
+  ruby each_slice.rb
+  ```
+
+- The `Tree` class was interesting, but it did not allow you to specify a new tree with a clean user interface. Let the initializer accept a nested structure of hashes. You should be able to specify a tree like this: `{'grandpa' => {'dad' => {'child 1' => {}, 'child 2' => {}}, 'uncle' => {'child 3' => {}, 'child 4' => {}}}}`.
+
+  ```bash
+  ruby tree.rb
+  ```
+
+  - Write a simple grep that will print the lines of a file having any occurrences of a phrase anywhere in that line. You will need to do a simple regular expression match and read lines from a file. (This is surprisingly simple in Ruby.) If you want, include line numbers.
+
+  ```bash
+  ruby grep.rb
   ```
