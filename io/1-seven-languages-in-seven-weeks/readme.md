@@ -123,3 +123,27 @@ io dim.io
 ```
 
 8. Write a program that gives you ten tries to guess a random number from 1-100. If you like, give a hint of "hotter" or "colder" after the first guess.
+
+## Day 3 - Self-Study
+
+### Do:
+
+- Enhance the XML program to add spaces to show the indentation structure.
+
+  ```
+  io xml.io
+  ```
+
+- Create a list syntax that uses brackets.
+
+  ```
+  io xml.io
+  ```
+
+- Enhance the XML program to handle attributes: if the first argument is a map (use the curly brackets syntax), add attributes to the XML program. For example:
+
+  `book({"author": "Tate"}...)` would print `<book author="Tate">`:
+
+  ```
+  io xml-attributes.io
+  ```
