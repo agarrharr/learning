@@ -16,6 +16,7 @@ Whenever I want to learn something new, I started building stuff with it. Here i
 - [ ] [Io](/io)
 - [ ] [JavaScript](/javascript)
 - [ ] [Node](/node)
+- [ ] [Prolog](/prolog)
 - [ ] [Python](/python)
 - [ ] [Reason](/reason)
 - [ ] [Ruby](/ruby)
