@@ -13,5 +13,4 @@ coloring(Alabama, Mississippi, Georgia, Tennessee, Florida) :-
   different(Alabama, Tennessee),
   different(Alabama, Florida),
   different(Georgia, Florida),
-  different(Georgia, Tennessee),
-  different(Georgia, Florida).
+  different(Georgia, Tennessee).
