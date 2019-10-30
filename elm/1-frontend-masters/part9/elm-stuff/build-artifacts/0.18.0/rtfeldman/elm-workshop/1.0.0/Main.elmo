@@ -1,2 +1,0 @@
-var _rtfeldman$elm_workshop$Main$main = _elm_lang$html$Html$program(
-	{view: _rtfeldman$elm_workshop$ElmHub$view, update: _rtfeldman$elm_workshop$ElmHub$update, init: _rtfeldman$elm_workshop$ElmHub$init, subscriptions: _rtfeldman$elm_workshop$ElmHub$subscriptions})();
