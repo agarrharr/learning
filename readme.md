@@ -20,6 +20,7 @@ Whenever I want to learn something new, I started building stuff with it. Here i
 - [ ] [Python](/python)
 - [ ] [Reason](/reason)
 - [ ] [Ruby](/ruby)
+- [ ] [Scala](/scala)
 - [ ] [Swift](/swift)
 - [ ] [TypeScript](/typescript)
 - [ ] [Vimscript](/vimscript)
