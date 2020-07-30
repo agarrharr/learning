@@ -14,6 +14,7 @@ Whenever I want to learn something new, I started building stuff with it. Here i
 - [ ] [Elm](/elm)
 - [ ] [Erlang](/erlang)
 - [ ] [Go](/go)
+- [ ] [Haskell](/haskell)
 - [ ] [Io](/io)
 - [ ] [JavaScript](/javascript)
 - [ ] [Node](/node)
