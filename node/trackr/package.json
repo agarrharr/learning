@@ -14,7 +14,7 @@
     "express": "^4.16.3",
     "is-absolute-url": "^2.1.0",
     "json2csv": "^4.1.2",
-    "luxon": "^1.2.0",
+    "luxon": "^2.5.2",
     "nodemon": "^1.17.3",
     "npm": "^6.0.0",
     "request-ip": "^2.0.2"
